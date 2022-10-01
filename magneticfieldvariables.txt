@@ -1,0 +1,300 @@
+There are 20 features including: 
+B1F1: CDF_REAL4 [86400]
+B1GSE: CDF_REAL4 [86400, 3]
+B1RTN: CDF_REAL4 [86400, 3]
+B1SDF1: CDF_REAL4 [86400]
+B1SDGSE: CDF_REAL4 [86400, 3]
+B1SDRTN: CDF_REAL4 [86400, 3]
+Epoch1: CDF_EPOCH [86400]
+FLAG1: CDF_INT2 [86400]
+NUM1_PTS: CDF_INT4 [86400]
+RANGE1: CDF_INT2 [86400]
+SENS: CDF_REAL4 [3, 8] NRV
+Time1_PB5: CDF_INT4 [86400, 3]
+ZERO: CDF_REAL4 [3, 8] NRV
+format_time: CDF_CHAR*2 [3] NRV
+label_bgse: CDF_CHAR*8 [3] NRV
+label_brtn: CDF_CHAR*8 [3] NRV
+label_bsdgse: CDF_CHAR*14 [3] NRV
+label_bsdrtn: CDF_CHAR*14 [3] NRV
+label_time: CDF_CHAR*27 [3] NRV
+unit_time: CDF_CHAR*4 [3] NRV
+
+ Epoch1 
+
+CATDESC: Time, centered, number of milliseconds since the epoch (1 sec) [CDF_CHAR]
+FIELDNAM: Time Line (1 sec) [CDF_CHAR]
+FILLVAL: 9999-12-31 23:59:59.999000 [CDF_EPOCH]
+FORMAT: E14.8 [CDF_CHAR]
+LABLAXIS: Epoch [CDF_CHAR]
+MONOTON: INCREASE [CDF_CHAR]
+SCALEMAX: 2022-01-02 00:00:00 [CDF_EPOCH]
+SCALEMIN: 2022-01-01 00:00:00 [CDF_EPOCH]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_BASE: 0 AD [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS: ms [CDF_CHAR]
+VALIDMAX: 2050-01-01 00:00:00 [CDF_EPOCH]
+VALIDMIN: 2015-01-01 00:00:00 [CDF_EPOCH]
+VAR_TYPE: support_data [CDF_CHAR]
+
+ Time1_PB5 
+
+CATDESC: Time, centered, in year, day, & milliseconds (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DEPEND_1: unit_time [CDF_CHAR]
+FIELDNAM: Time Line (1 sec) [CDF_CHAR]
+FILLVAL: -2147483648 [CDF_INT4]
+FORM_PTR: format_time [CDF_CHAR]
+LABL_PTR_1: label_time [CDF_CHAR]
+MONOTON: INCREASE [CDF_CHAR]
+SCALEMAX: [2022    2    0] [CDF_INT4]
+SCALEMIN: [2022    1    0] [CDF_INT4]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNIT_PTR: unit_time [CDF_CHAR]
+VALIDMAX: [ 2049   365 86400] [CDF_INT4]
+VALIDMIN: [2015    1    0] [CDF_INT4]
+VAR_TYPE: support_data [CDF_CHAR]
+
+ NUM1_PTS 
+
+CATDESC: Number of points in average (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Number of points in average (1 sec) [CDF_CHAR]
+FILLVAL: -2147483648 [CDF_INT4]
+FORMAT: I2 [CDF_CHAR]
+LABLAXIS: No. Points [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: 50 [CDF_INT4]
+SCALEMIN: 0 [CDF_INT4]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS:   [CDF_CHAR]
+VALIDMAX: 60 [CDF_INT4]
+VALIDMIN: 0 [CDF_INT4]
+VAR_TYPE: support_data [CDF_CHAR]
+
+ B1F1 
+
+CATDESC: Magnetic field magnitude (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Magnetic field magnitude (1 sec) [CDF_CHAR]
+FILLVAL: -1e+31 [CDF_FLOAT]
+FORMAT: E13.6 [CDF_CHAR]
+LABLAXIS: B [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: 10.33799 [CDF_FLOAT]
+SCALEMIN: 6.200893 [CDF_FLOAT]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS: nT [CDF_CHAR]
+VALIDMAX: 65534.0 [CDF_FLOAT]
+VALIDMIN: 0.0 [CDF_FLOAT]
+VAR_NOTES: Average of the magnitude (F1) [CDF_CHAR]
+VAR_TYPE: data [CDF_CHAR]
+
+ B1SDF1 
+
+CATDESC: Standard deviation of B magnitude (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Standard deviation of B magnitude (1 sec) [CDF_CHAR]
+FILLVAL: -1e+31 [CDF_FLOAT]
+FORMAT: E13.6 [CDF_CHAR]
+LABLAXIS: B_SIGMA [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: 0.3389488 [CDF_FLOAT]
+SCALEMIN: 2.5620958e-10 [CDF_FLOAT]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS: nT [CDF_CHAR]
+VALIDMAX: 65534.0 [CDF_FLOAT]
+VALIDMIN: 0.0 [CDF_FLOAT]
+VAR_NOTES: Standard deviation of the magnitude (F1 SIGMA) [CDF_CHAR]
+VAR_TYPE: data [CDF_CHAR]
+
+ B1GSE 
+
+CATDESC: Magnetic field vector in GSE cartesian coordinates (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Magnetic field vector in GSE cartesian coordinates (1 sec) [CDF_CHAR]
+FILLVAL: -1e+31 [CDF_FLOAT]
+FORMAT: E13.6 [CDF_CHAR]
+LABL_PTR_1: label_bgse [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: [3.208676 9.184736 9.146015] [CDF_FLOAT]
+SCALEMIN: [-9.118552  -6.4383945 -9.388936 ] [CDF_FLOAT]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS: nT [CDF_CHAR]
+VALIDMAX: [65534. 65534. 65534.] [CDF_FLOAT]
+VALIDMIN: [-65534. -65534. -65534.] [CDF_FLOAT]
+VAR_TYPE: data [CDF_CHAR]
+
+ B1SDGSE 
+
+CATDESC: Standard deviation of B vector in GSE coordinates (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Standard deviation of B vector in GSE coordinates (1 sec) [CDF_CHAR]
+FILLVAL: -1e+31 [CDF_FLOAT]
+FORMAT: E13.6 [CDF_CHAR]
+LABL_PTR_1: label_bsdgse [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: [1.0588491 1.3201954 1.8270992] [CDF_FLOAT]
+SCALEMIN: [7.7889368e-08 3.0351921e-09 1.9429582e-07] [CDF_FLOAT]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS: nT [CDF_CHAR]
+VALIDMAX: [65534. 65534. 65534.] [CDF_FLOAT]
+VALIDMIN: [0. 0. 0.] [CDF_FLOAT]
+VAR_TYPE: data [CDF_CHAR]
+
+ B1RTN 
+
+CATDESC: Magnetic field vector in RTN cartesian coordinates (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Magnetic field vector in RTN cartesian coordinates (1 sec) [CDF_CHAR]
+FILLVAL: -1e+31 [CDF_FLOAT]
+FORMAT: E13.6 [CDF_CHAR]
+LABL_PTR_1: label_brtn [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: [9.114388  6.60937   9.3228035] [CDF_FLOAT]
+SCALEMIN: [-3.2172577 -9.183029  -9.282534 ] [CDF_FLOAT]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS: nT [CDF_CHAR]
+VALIDMAX: [65534. 65534. 65534.] [CDF_FLOAT]
+VALIDMIN: [-65534. -65534. -65534.] [CDF_FLOAT]
+VAR_TYPE: data [CDF_CHAR]
+
+ B1SDRTN 
+
+CATDESC: Standard deviation of B vector in RTN coordinates (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Standard deviation of B vector in RTN coordinates (1 sec) [CDF_CHAR]
+FILLVAL: -1e+31 [CDF_FLOAT]
+FORMAT: E13.6 [CDF_CHAR]
+LABL_PTR_1: label_bsdrtn [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: [1.0566086 1.3348987 1.8763286] [CDF_FLOAT]
+SCALEMIN: [7.8042021e-08 1.9535401e-08 1.9434881e-07] [CDF_FLOAT]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS: nT [CDF_CHAR]
+VALIDMAX: [65534. 65534. 65534.] [CDF_FLOAT]
+VALIDMIN: [0. 0. 0.] [CDF_FLOAT]
+VAR_TYPE: data [CDF_CHAR]
+
+ RANGE1 
+
+CATDESC: Magnetometer measurement range (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Magnetometer measurement range (1 sec) [CDF_CHAR]
+FILLVAL: -32768 [CDF_INT2]
+FORMAT: I1 [CDF_CHAR]
+LABLAXIS: Measurement Range [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: 1 [CDF_INT2]
+SCALEMIN: 1 [CDF_INT2]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS:   [CDF_CHAR]
+VALIDMAX: 7 [CDF_INT2]
+VALIDMIN: 0 [CDF_INT2]
+VAR_TYPE: support_data [CDF_CHAR]
+
+ FLAG1 
+
+CATDESC: Data quality flag (1 sec) [CDF_CHAR]
+DEPEND_0: Epoch1 [CDF_CHAR]
+DISPLAY_TYPE: time_series [CDF_CHAR]
+FIELDNAM: Data quality flag (1 sec): 0-good quality [CDF_CHAR]
+FILLVAL: -32768 [CDF_INT2]
+FORMAT: I3 [CDF_CHAR]
+LABLAXIS: Quality Flag [CDF_CHAR]
+MONOTON: FALSE [CDF_CHAR]
+SCALEMAX: 1 [CDF_INT2]
+SCALEMIN: 0 [CDF_INT2]
+SCALETYP: LINEAR [CDF_CHAR]
+TIME_RES: 1 sec [CDF_CHAR]
+UNITS:   [CDF_CHAR]
+VALIDMAX: 255 [CDF_INT2]
+VALIDMIN: 0 [CDF_INT2]
+VAR_TYPE: support_data [CDF_CHAR]
+
+ ZERO 
+
+CATDESC: Sensor zeros, 3 components x 8 ranges [CDF_CHAR]
+FIELDNAM: Sensor zeros [CDF_CHAR]
+FILLVAL: -1e+31 [CDF_FLOAT]
+FORMAT: E13.6 [CDF_CHAR]
+VALIDMAX: 4095 [CDF_INT2]
+VALIDMIN: 0 [CDF_INT2]
+VAR_TYPE: metadata [CDF_CHAR]
+
+ SENS 
+
+CATDESC: Sensor sensitivities, 3 components x 8 ranges [CDF_CHAR]
+FIELDNAM: Sensor sensitivities [CDF_CHAR]
+FILLVAL: -1e+31 [CDF_FLOAT]
+FORMAT: E13.6 [CDF_CHAR]
+VALIDMAX: 40 [CDF_INT2]
+VALIDMIN: 0 [CDF_INT2]
+VAR_TYPE: metadata [CDF_CHAR]
+
+ label_time 
+
+CATDESC: Label for Time_PB5 [CDF_CHAR]
+FIELDNAM: Label for Time_PB5 [CDF_CHAR]
+FORMAT: A27 [CDF_CHAR]
+VAR_TYPE: metadata [CDF_CHAR]
+
+ format_time 
+
+CATDESC: Format for Time_PB5 [CDF_CHAR]
+FIELDNAM: Format for Time_PB5 [CDF_CHAR]
+FORMAT: A2 [CDF_CHAR]
+VAR_TYPE: metadata [CDF_CHAR]
+
+ unit_time 
+
+CATDESC: Units for Time_PB5 [CDF_CHAR]
+FIELDNAM: Units for Time_PB5 [CDF_CHAR]
+FORMAT: A4 [CDF_CHAR]
+VAR_TYPE: metadata [CDF_CHAR]
+
+ label_bgse 
+
+CATDESC: Label for B vector in GSE coordinates [CDF_CHAR]
+FIELDNAM: Label for B in GSE coordinates [CDF_CHAR]
+FORMAT: A8 [CDF_CHAR]
+VAR_TYPE: metadata [CDF_CHAR]
+
+ label_bsdgse 
+
+CATDESC: Label for standard deviation of B vector in GSE coordinates [CDF_CHAR]
+FIELDNAM: Label for standard deviation of B vector in GSE coordinates [CDF_CHAR]
+FORMAT: A12 [CDF_CHAR]
+VAR_TYPE: metadata [CDF_CHAR]
+
+ label_brtn 
+
+CATDESC: Label for B vector in RTN coordinates [CDF_CHAR]
+FIELDNAM: Label for B in RTN coordinates [CDF_CHAR]
+FORMAT: A8 [CDF_CHAR]
+VAR_TYPE: metadata [CDF_CHAR]
+
+ label_bsdrtn 
+
+CATDESC: Label for standard deviation of B vector in RTN coordinates [CDF_CHAR]
+FIELDNAM: Label for standard deviation of B vector in RTN coordinates [CDF_CHAR]
+FORMAT: A12 [CDF_CHAR]
+VAR_TYPE: metadata [CDF_CHAR]
